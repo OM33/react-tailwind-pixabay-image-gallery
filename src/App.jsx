@@ -9,7 +9,7 @@ const App = () => {
   const apiKey = import.meta.env.VITE_PIXABAY_API_KEY;
 
   useEffect(() => {
-    const url = `https://pixabay.com/api/?key=${apiKey}&q=${encodeURIComponent(term)}&image_type=photo&pretty=true`;
+    const url = `https://pixabay.com/api/?key=${apiKey}&q=${term}&image_type=photo&pretty=true`;
     fetch(url)
       .then(res => res.json())
       .then(data => {
